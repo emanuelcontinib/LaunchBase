@@ -1,3 +1,7 @@
+:root{
+    --color-white:rgb(210, 221, 221);
+    --color-orange:rgb(252, 165, 4);
+}
 
 *{
     margin: 0;
@@ -11,23 +15,83 @@ body{
 }
 header {
     padding: 32px;
-    border-bottom: 1px solid #333;
+    border-bottom: 1px solid rgb(85, 85, 85);
     background: rgba(0,0,0,0,);
 }
 
-header div {
+.links {
     text-align: center;
 }
-header div a {
-    color: rgb(255, 255, 255);
+
+.links a {
+    color: var(--color-white);
     font-size: 18px;
     line-height: 28px;
     margin: 0 16px;
     text-decoration: none;
-    
 }
 
-header div a:hover {
-    color: rgb(106, 80, 209);
+.links a:hover {
+    color:var(--color-orange);
+    transition: 500ms;
+}
+
+#wrapper{
+    text-align: center;
+    padding: 32px;
+}
+
+#wrapper img{
+    border-radius: 8px 100px;
+    border: solid  var(--color-orange);
+    margin-bottom: 32px;
+    height: 300px;
+}
+
+#wrapper h1{
+    font-size: 35px;
+    line-height: 40px;
+    font-weight: bold;
+
+    margin-bottom: 12px;
+
+    color: var(--color-white);
+}
+
+#wrapper h2{
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: normal;
+
+    margin-bottom: 10px;
+
+    color: var(--color-white);
+    opacity: 0.5;
+}
+
+#wrapper p{
+    color: var(--color-white);
+    opacity: 0.5;
+    
+    max-width: 300px;
+    margin:12px auto;
+
+    font-size: 18px;
+    line-height: 24px;
+}
+
+#wrapper p a {
+    font-weight: bold;
+    color:rgb(210, 221, 221);
+    text-decoration: none;
+}
+
+#wrapper p a:hover {
+    color: rgb(252, 165, 4);
     transition: 250ms;
+}
+
+#links-footer a{
+    
+    border-bottom: 2px solid var(--color-orange);
 }
