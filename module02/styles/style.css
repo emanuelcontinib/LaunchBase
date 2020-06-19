@@ -1,6 +1,7 @@
 :root{
-    --color-white:rgb(210, 221, 221);
+    --color-white:rgb(226, 226, 226);
     --color-orange:rgb(252, 165, 4);
+    --color-dark:#1f1f1f;
 }
 
 *{
@@ -11,7 +12,7 @@
 
 }
 body{
-    background: #110c0c;
+    background:var(--color-dark)
 }
 header {
     padding: 32px;
@@ -94,4 +95,50 @@ header {
 #links-footer a{
     
     border-bottom: 2px solid var(--color-orange);
+}
+
+/* Cards */
+
+.cards{
+    max-width: 800px;
+    margin: 0  auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.card-img-container img{
+    width: 100%;
+    border-radius: 7px;
+    border: 1px solid rgb(85, 85, 85);
+}
+
+.content, 
+.card-info {
+    padding: 24px;
+
+    color: var(--color-white);
+}
+
+.card-info{ /*divide o template em colunas */
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+
+.card-info .coast{
+    background-color:var(--color-dark);
+    filter: brightness(85%);   
+    
+    padding: 5px 20px;
+    border-radius: 0px 10px 10px 0px;
+    text-align: center;
+}
+
+.card-info .description{
+    background-color:var(--color-dark);
+    filter: brightness(85%);   
+    
+    padding: 5px 20px;
+    border-radius: 10px 0px 0px 10px;
+    text-align: center;
 }
