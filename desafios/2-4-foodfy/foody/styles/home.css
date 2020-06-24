@@ -1,0 +1,41 @@
+.header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
+    color: rgb(34, 34, 33);
+    margin: 12px;
+
+}
+.header #foodfy{
+    text-align: center;
+    font-family: 'Ubuntu';
+    font-size: 25px;
+    font-weight: lighter;
+}
+.header #about {
+    text-align: right;
+    margin-right: 22px 8px;
+
+    font-family: "Ubuntu";
+    font-weight: normal;
+    font-size: 15px;
+    padding-top: 10px;
+
+}
+.header #recipes {
+    text-align: center;
+    margin-right: 22px 8px;
+
+    font-family: "Ubuntu";
+    font-weight: normal;
+    font-size: 15px;
+    padding-top: 10px;
+}
+
+
+.logo{
+    background-color:#FBDFDB ;
+    border-radius: 30px;
+}
+.logo #img{
+    align:right;
+}
