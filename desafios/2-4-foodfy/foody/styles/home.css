@@ -1,41 +1,144 @@
-.header {
+*{
+    font-family: "Roboto";
+    letter-spacing: 1px;
+}
+.container {
+    width: 100%;
+    padding-left: 15 px;
+    padding-right: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.row {
+    margin: 25px;
+    margin-left: 78px;
+    margin-right: 78px;
+    max-width: 85%;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
-    color: rgb(34, 34, 33);
-    margin: 12px;
-
-}
-.header #foodfy{
-    text-align: center;
-    font-family: 'Ubuntu';
-    font-size: 25px;
-    font-weight: lighter;
-}
-.header #about {
-    text-align: right;
-    margin-right: 22px 8px;
-
-    font-family: "Ubuntu";
-    font-weight: normal;
-    font-size: 15px;
-    padding-top: 10px;
-
-}
-.header #recipes {
-    text-align: center;
-    margin-right: 22px 8px;
-
-    font-family: "Ubuntu";
-    font-weight: normal;
-    font-size: 15px;
-    padding-top: 10px;
+    grid-template-columns: 1fr 1fr 3fr ;
+    gap: 25px;
+    height: auto;
 }
 
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+    margin: 35px 0px;
+}
 
-.logo{
-    background-color:#FBDFDB ;
+header .logo {
+    width: 100px;
+}
+
+header .menu {
+    width: 1000%;
+    display: flex;
+    align-items: center;
+    
+}
+
+header .menu a {
+    margin-left: 30px;
+    color: #111;
+    text-decoration: none;
+    transition: 0.3s all ease-in;
+}
+
+header .menu a:hover {
+    color: #c79188;
+}
+
+header .menu a:first-child {
+    margin-left: 0;
+}
+
+.melhores-receitas {
+    width: 81%;
+    height: 340px;
+    margin: 0px 78px;
+    background: #fbdfdb;
     border-radius: 30px;
+    padding: 2rem 15px 0 15px;
+    margin-bottom: 3rem;
+
+    display: flex;
+    flex-wrap: wrap;
 }
-.logo #img{
-    align:right;
+
+.melhores-receitas .melhores-receitas__texto {
+    width: 32%;
+    margin-bottom: 2rem;
+    margin-left: 120px;
+    margin-top: 65px;
+}
+
+melhores-receitas .melhores-receitas__texto h2 {
+    font-weight: bold;
+    font-size: 32px;
+    color: #111111;
+    margin-bottom: 10px;
+    letter-spacing: 1.5px;
+}
+
+.melhores-receitas .melhores-receitas__texto p {
+    line-height: 28px;
+    color: rgb(17, 17, 17, 0.7);
+    max-width: 290px;
+}
+
+.melhores-receitas .melhores-receitas__chefe {
+    width:75%;
+    text-align: right;
+    position: absolute;
+}
+
+
+/*CARDS RECEITAS*/
+
+.mais-acessadas h2{
+    margin-left: 85px;
+}
+
+.mais-acessadas .mais-acessadas__card p.nome {
+    font-size: 18px;
+    color: #111111;
+    line-height: 21px;
+    margin-bottom: 0.4rem;
+}
+
+.mais-acessadas .mais-acessadas__card p.autor {
+    font-size: 14px;
+    color: #777;
+    margin-top: 0px;
+}
+
+
+
+
+.row .thumbnail img{
+    width: 310px;
+    height: 150px;
+    border-radius: 8px;
+}
+
+
+
+footer {
+    width: 100%;
+    background: #eee;
+    text-align: center;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    bottom: 0px;
+}
+
+footer p {
+    font-size: 14px;
+    color: #999999;
+    padding: 0;
+    margin: 0;
+}
+.row img{
+    width: 300px;
 }
