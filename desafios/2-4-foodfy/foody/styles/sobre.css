@@ -49,8 +49,8 @@ header .menu a:hover {
     color: #c79188;
 }
 
-header .menu a:first-child {
-    margin-left: 0;
+header .menu a:first-child{
+    font-weight: bold;
 }
 
 main{

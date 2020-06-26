@@ -10,6 +10,16 @@
     margin-left: auto;
 }
 
+.row {
+    margin: 25px;
+    margin-left: 78px;
+    margin-right: 78px;
+    max-width: 85%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 3fr ;
+    gap: 25px;
+    height: auto;
+}
 
 .img-fluid {
     max-width: 100%;
@@ -25,7 +35,7 @@ header .menu {
     width: 1000%;
     display: flex;
     align-items: center;
-    
+    margin-left: 0;
 }
 
 header .menu a {
@@ -39,61 +49,12 @@ header .menu a:hover {
     color: #c79188;
 }
 
-header .menu a:first-child {
-    margin-left: 0;
-}
-
-.melhores-receitas {
-    width: 86%;
-    height: 340px;
-    margin: 0px 78px;
-    background: #fbdfdb;
-    border-radius: 30px;
-    padding: 2rem 15px 0 15px;
-    margin-bottom: 3rem;
-
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.melhores-receitas .melhores-receitas__texto {
-    width: 32%;
-    margin-bottom: 2rem;
-    margin-left: 120px;
-    margin-top: 65px;
-}
-
-melhores-receitas .melhores-receitas__texto h2 {
+header .menu #receitas{
     font-weight: bold;
-    font-size: 32px;
-    color: #111111;
-    margin-bottom: 10px;
-    letter-spacing: 1.5px;
-}
-
-.melhores-receitas .melhores-receitas__texto p {
-    line-height: 28px;
-    color: rgb(17, 17, 17, 0.7);
-}
-
-.melhores-receitas .melhores-receitas__chefe {
-    width:75%;
-    text-align: right;
-    position: absolute;
 }
 
 
 /*CARDS RECEITAS*/
-
-.row {
-    width: 93%;
-    margin-left: 78px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr ;
-    gap: 25px;
-    height: auto;
-}
-
 
 .mais-acessadas h2{
     margin-left: 85px;
@@ -140,4 +101,44 @@ footer p {
 }
 .row img{
     width: 300px;
+}
+
+/*=== MODAL ====*/
+
+.modal-overlay{
+    background-color: rgba(0,0,0,0.5);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0px;
+    opacity: 0%;
+    visibility: hidden;
+}
+
+.modal{
+    background-color: #eee;
+    width: 560px;
+    height: 313px;
+    position: relative;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%)
+}
+
+.modal .close-modal{
+    position: absolute;
+    cursor: pointer;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 85px;
+
+    font-size: 12px;
+    opacity:0.5;
+}
+
+.modal-overlay.active{ 
+    opacity: 1;
+    visibility: visible;
 }
