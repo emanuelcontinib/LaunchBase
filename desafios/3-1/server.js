@@ -1,19 +1,18 @@
 const express = require('express')
-const nunjucks = require("nunjucks")
+const nunjucks = require('nunjucks')
 
 const server = express()
 
 server.use(express.static('public'))
 
-server.set("view engine", "html") //setando o engine usando html
+server.set("view engine", "njk") //setando o motor engine usando html
 
 nunjucks.configure("views", { //configurando o nujucks
     express: server
 })
 
-server.get("/home", function (req, res) {
-    return res.render("home") //renderizar a página index
-})
+server.get("/", function (req, res) {
+    return res.render("home")}) //renderizar a página home
 
 
 server.get("/about", function (req, res) {
@@ -31,4 +30,3 @@ server.use(function (req, res) {
 server.listen(5000, function () { //porta e depois a função//
     console.log("server ok")
 })
-
