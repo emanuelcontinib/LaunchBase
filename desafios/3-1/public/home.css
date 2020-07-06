@@ -60,9 +60,6 @@ header div a:hover {
     margin-top: 50px;
 }
 
-
-
-
 .modal-overlay{
     background-color: rgba(0,0,0,0.7);
     width: 100%;
@@ -82,6 +79,7 @@ header div a:hover {
 }
 
 .modal .close-modal{
+    color: black;
     position: absolute;
     right: 3px;
     top: 3px;

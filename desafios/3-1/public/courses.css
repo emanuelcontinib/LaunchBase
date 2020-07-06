@@ -19,10 +19,15 @@ body{
 header {
     padding: 32px;
 }
-
-header div {
+header p{
+    text-align: center;
+} 
+.links{
     text-align: center;
 }
+
+
+
 header div a {
     color: rgb(255, 255, 255);
     font-size: 18px;
@@ -76,6 +81,9 @@ h3.coast{
     font-size: 16px;
 }
 
+.cards{
+    text-align: center;
+}
 .cards #starter #number{
     margin:auto;
     display: flex;
@@ -180,6 +188,7 @@ h3.coast{
 }
 
 .modal .close-modal{
+    color: black;
     position: absolute;
     right: 3px;
     top: 3px;
@@ -198,4 +207,3 @@ iframe{
     position: absolute;
     top:5%
 }
-
