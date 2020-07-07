@@ -17,12 +17,15 @@
     <section class="cards">
     {%for item in items %}
         <section class="card" id = "{{item.id}}">
-            <div class="card-img-container">
+            <div class="card-img-container {{ 'featured-wrapper' if item.featured }}">
                 <img src="https://img.youtube.com/vi/{{item.id}}/maxresdefault.jpg" 
                     alt="Imagem de {{item.title}}">
+                    {%if item.featured%}
+                        <div class="featured">Featured</div>
+                    {%endif%}
             </div> 
             <div class="content">
-                <p> '{{item.title}}'</p>
+                <p> {{item.title}}</p>
             </div>
             <div class="card-info">
                 <p class='{{item.description}}'>Rocketseat

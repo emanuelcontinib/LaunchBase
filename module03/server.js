@@ -9,7 +9,8 @@ server.set("view engine", "njk")//setando o engine usando html
 
 nunjucks.configure("views",{ //configurando o nujucks
     express: server,
-    autoescape:false
+    autoescape:false,
+    noCache:true    
 })
 
 server.get("/about", function (req, res) {
