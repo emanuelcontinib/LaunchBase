@@ -33,6 +33,18 @@ server.get("/portfolio", function (req, res) {
     return res.render("portfolio" , {items: videos})  //renderizar a página classes
 })
 
+server.get('/video', function(req,res){
+    const id = req.query.id
+
+    const video = videos.find(function(video){
+        return video.id == id
+    }) 
+    if(!video){
+        return res.send ("Video not found")
+    }
+    return res.render('video', {item: video})
+})
+
 server.listen(5000, function () { //porta e depois a função//
     console.log("server ok")
 })  

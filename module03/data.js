@@ -31,4 +31,4 @@ module.exports = [
         coast:"Grátis",
         featured: true
     },
-]   
+]    
