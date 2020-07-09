@@ -10,26 +10,44 @@ server.set("view engine", "njk") //setando o motor engine usando html
 
 nunjucks.configure("views", { //configurando o nujucks
     express: server,
-    autoescape:false
+    autoescape: false
 })
 
 server.get("/", function (req, res) {
-    return res.render("home")}) //renderizar a página home
+    return res.render("home")
+}) //renderizar a página home
 
 
 server.get("/about", function (req, res) {
     const about = {
-        src:`https://www.reshape.com.br/assets/uploads/rocketseat.png`,
-        h3:"Treinamento imersivo nas tecnologias mais modernas de desenvolvimento",
+        src: `https://www.reshape.com.br/assets/uploads/rocketseat.png`,
+        h3: "Treinamento imersivo nas tecnologias mais modernas de desenvolvimento",
         modules: "13 módulos",
         coast: 'R$ Pago'
     }
-    return res.render("about", {about}) //renderizar a página classes
+    return res.render("about", {
+        about
+    }) //renderizar a página classes
 })
 
 server.get("/courses", function (req, res) {
-    return res.render("courses", {items:cards}) //renderizar a página classes
+    return res.render("courses", {
+        items: cards
+    }) //renderizar a página classes
 })
+
+server.get('/courses/:id', (req, res) => {
+	const { id } = req.params
+
+	const course = cards.find(course => course.id == id)
+
+	if (!course) {
+		return res.send('Course not found')
+	}
+
+	return res.render('course', { course })
+})
+
 
 server.use(function (req, res) {
     res.status(404).render("not-found");

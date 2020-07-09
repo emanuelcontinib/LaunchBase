@@ -1,16 +1,12 @@
-const modalOverlay = document.querySelector('.modal-overlay')/*usa-se o mesmo nome que o seletor do CSS*/ 
 const cards = document.querySelectorAll('.card')
 
 for (let card of cards){
+    console.log('card');
+    console.log(card);
+    
     card.addEventListener('click', function(){
-        const videoId = card.getAttribute("id");
-        modalOverlay.classList.add('active')
-        modalOverlay.querySelector('iframe')
-        .src = `https://www.rocketseat.com.br/${videoId}`
+        const courseId = card.getAttribute("id"); 
+        window.location.href = `/courses/${courseId}`
     })
 }
 
-document.querySelector('.close-modal').addEventListener('click', function(){
-    modalOverlay.classList.remove('active')
-    modalOverlay.querySelector('iframe').src = ""
-})
