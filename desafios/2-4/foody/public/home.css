@@ -1,0 +1,134 @@
+*{
+    font-family: "Roboto";
+    letter-spacing: 1px;
+}
+.container {
+    display: flexbox;
+    align-content: ;
+    max-width: 55%;
+    padding-left: 15 px;
+    padding-right: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.row-header {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    gap: 25px;
+    margin: 25px 0;
+}
+header .logo {
+    width: 94px;
+}
+.img-fluid-cheff img{
+    position: relative;
+}
+
+header .menu a {
+    margin-left: 30px;
+    color: #111;
+    text-decoration: none;
+    transition: 0.3s all ease-in;
+}
+
+header .menu a:hover {
+    color: #c79188;
+}
+
+header .menu a:first-child {
+    margin-left: 0;
+}
+
+.melhores-receitas {
+    width: 100%;
+    height: 290px;
+    background: #fbdfdb;
+    border-radius: 30px;
+
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.melhores-receitas .melhores-receitas__texto {
+    flex-direction: column-reverse;
+    width: 32%;
+    margin-left: 120px;
+    display: flex;
+    justify-content: center;
+}
+
+melhores-receitas .melhores-receitas__texto h2 {
+    font-weight: bold;
+    font-size: 32px;
+    color: #111111;
+    margin-bottom: 10px;
+    letter-spacing: 1.5px;
+}
+
+.melhores-receitas .melhores-receitas__texto p {
+    line-height: 28px;
+    color: rgb(17, 17, 17, 0.7);
+}
+
+.melhores-receitas .melhores-receitas__chefe {
+    width:75%;
+    text-align: right;
+    position: absolute;
+}
+
+
+/*CARDS RECEITAS*/
+
+.row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    gap: 25px;
+}
+
+
+.mais-acessadas h2{
+    margin: 35px 0;
+    text-align: inherit;
+    font-weight: lighter;
+}
+
+.mais-acessadas .mais-acessadas__card p.nome {
+    font-size: 18px;
+    color: #111111;
+    line-height: 21px;
+    margin-bottom: 0.4rem;
+}
+
+.mais-acessadas .mais-acessadas__card p.autor {
+    font-size: 14px;
+    color: #777;
+    margin-top: 0px;
+}
+
+
+
+
+.row .thumbnail img{
+    width: 310px;
+    height: 150px;
+    border-radius: 8px;
+}
+
+
+
+footer {
+    width: 100%;
+    background: #eee;
+    text-align: center;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    bottom: 0px;
+}
+
+footer p {
+    font-size: 14px;
+    color: #999999;
+    padding: 0;
+    margin: 0;
+}
