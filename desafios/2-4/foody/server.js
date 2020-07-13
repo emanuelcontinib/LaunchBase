@@ -27,6 +27,10 @@ server.get("/sobre", function (req, res) {
 server.get("/receitas", function (req, res) {
     return res.render("receitas")  //renderizar a página classes
 })
+
+server.get("/receita", function (req, res) {
+    return res.render("receita")  //renderizar a página classes
+})
 server.listen(5000, function () { //porta e depois a função//
     console.log("server ok")
 })   

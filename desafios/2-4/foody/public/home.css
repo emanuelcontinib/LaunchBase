@@ -2,14 +2,17 @@
     font-family: "Roboto";
     letter-spacing: 1px;
 }
-.container {
-    display: flexbox;
-    align-content: ;
-    max-width: 55%;
-    padding-left: 15 px;
+.container{
+    width: 100%;
     padding-right: 15px;
+    padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
+}
+
+.container-header {
+display: flex;
+align-items: center;
 }
 
 .row-header {
@@ -19,14 +22,13 @@
     margin: 25px 0;
 }
 header .logo {
-    width: 94px;
+    margin: 35px;
 }
 .img-fluid-cheff img{
     position: relative;
 }
 
 header .menu a {
-    margin-left: 30px;
     color: #111;
     text-decoration: none;
     transition: 0.3s all ease-in;
@@ -37,17 +39,19 @@ header .menu a:hover {
 }
 
 header .menu a:first-child {
-    margin-left: 0;
+    margin: 0px 35px;
 }
 
 .melhores-receitas {
-    width: 100%;
-    height: 290px;
+    width: 75%;
+    height: 320px;
     background: #fbdfdb;
     border-radius: 30px;
-
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0px 10%;
 }
 
 .melhores-receitas .melhores-receitas__texto {
@@ -71,19 +75,12 @@ melhores-receitas .melhores-receitas__texto h2 {
     color: rgb(17, 17, 17, 0.7);
 }
 
-.melhores-receitas .melhores-receitas__chefe {
-    width:75%;
-    text-align: right;
-    position: absolute;
-}
-
-
 /*CARDS RECEITAS*/
 
-.row {
+.row-cards {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr ;
-    gap: 25px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 30px;
 }
 
 
@@ -105,11 +102,13 @@ melhores-receitas .melhores-receitas__texto h2 {
     color: #777;
     margin-top: 0px;
 }
+.main{
+
+}
 
 
 
-
-.row .thumbnail img{
+.row img{
     width: 310px;
     height: 150px;
     border-radius: 8px;
