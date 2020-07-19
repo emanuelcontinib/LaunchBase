@@ -57,7 +57,7 @@ header .menu a:hover {
     margin: auto;
 }
 .mais-acessadas__card{
-    border: solid 1px rgb(223, 222, 222);
+    background-color:  rgb(223, 222, 222);
     border-radius: 13px;
 }
 .row-card img {
