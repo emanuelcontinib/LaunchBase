@@ -3,6 +3,7 @@ const nunjucks = require ('nunjucks')
 
 const server = express()
 const recipes = require("./data")
+
 server.use(express.static('public'))
 
 server.set("view engine", "njk")//setando o engine usando html
@@ -25,12 +26,17 @@ server.get("/sobre", function (req, res) {
 })
 
 server.get("/receitas", function (req, res) {
-    return res.render("receitas")  //renderizar a página classes
+    return res.render("receitas", {items:recipes})  //renderizar a página classes
 })
 
-server.get("/receita", function (req, res) {
-    return res.render("receita")  //renderizar a página classes
-})
+server.get("/receitas/:index", function (req, res) {
+    // Array de receitas carregadas do data.js
+    const recipeIndex = req.params.index;
+    
+    console.log(recipes[recipeIndex]);
+    return res.render("receita",{receita:recipes[recipeIndex]})  //renderizar a página classes
+  })
+
 server.listen(5000, function () { //porta e depois a função//
     console.log("server ok")
 })   

@@ -8,15 +8,14 @@
   margin-left: 7.5%;
 }
 
-.img-fluid {
+.img-header {
   max-width: 100%;
   height: auto;
+  margin: 35px 0px;
 }
 
 header .logo {
   width: 94px;
-  margin: 35px 0px;
-
 }
 
 header .menu {
@@ -36,18 +35,18 @@ header .menu a {
 header .menu a:hover {
   color: #c79188;
 }
+
 .img-fluid-cheff img{
   position: relative;
 }
 
 
-.melhores-receitas {
-  width: 85%;
+.image-fluid {
+  width: 85%; 
   height: 320px;
   background: #fbdfdb;
   border-radius: 30px;
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
   margin: auto;
@@ -71,71 +70,4 @@ melhores-receitas .melhores-receitas__texto h2 {
 .melhores-receitas .melhores-receitas__texto p {
   line-height: 28px;
   color: rgb(17, 17, 17, 0.7);
-}
-
-/*CARDS RECEITAS*/
-
-.row-cards {
-  max-width: 85%;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 25px;
-  height: auto;
-  margin: auto;
-}
-.row-card {
-  max-width: 85%;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 25px;
-  height: auto;
-  margin: auto;
-}
-.mais-acessadas__card{
-  border: solid 1px rgb(223, 222, 222);
-  border-radius: 13px;
-}
-.row-cards img {
-  max-width: 100%;
-  border-radius: 11px;
-}
-
-.mais-acessadas h2{
-  margin: 35px 7.50%;
-  text-align: inherit;
-  font-weight: lighter;
-}
-
-.mais-acessadas .mais-acessadas__card p.nome {
-  font-size: 18px;
-  color: #111111;
-  line-height: 21px;
-  margin-bottom: 0.4rem;
-  margin-left: 3px;
-}
-
-.mais-acessadas .mais-acessadas__card p.autor {
-  font-size: 14px;
-  color: #777;
-  margin-top: 0px;
-  margin-left: 5px;
-  
-}
-.row img{
-  width: 310px;
-  height: 150px;
-  border-radius: 8px;
-}
-
-
-
-footer {
-  justify-content: center;
-  background: rgb(253, 253, 253);
-  text-align: center;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  font-size: 12px;
-  color: #616161;
-  bottom: 0px;
 }

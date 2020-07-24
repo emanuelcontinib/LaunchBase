@@ -5,41 +5,44 @@
 
   <!-- INICIO MAIN -->
   <main>
-    
+
     <section>
-        <div class='receita'>
-          <img class="img-fluid" src="" alt="receita">
-        </div>
-        
-        <div class="receita-titulo"></div>
-        </div>
-
-        <div class="receita-autor"></div>
-        </div>
-    </section>
-
-    <!-- INICIO RECEITA -->
-    <section>
-      <div class='ingredientes'>
-        
-        <ul>
-
-          <h3>Ingredientes</h3>
-            <li><span> asdfasdf</span></li>
-
-          <h3>Modo de Preparo</h3>
-            <span> asdfasdf</span>
-
-          <h3>Informações Adicionais</h3>
-            <span>asdfasdf </span>
-
-        </ul>
+      <div class='receita'>
+        <img class="img-fluid" src="{{receita.image}}" alt="{{receita.title}}">
       </div>
-    </section>
-    <!--FIM RECEITA-->
-  </main>
-      
- 
 
- 
+      <div class="receita-titulo">{{receita.title}}</div>
+    </div>
+
+    <div class="receita-autor">{{receita.author}}</div>
+  </div>
+</section>
+
+<!-- INICIO RECEITA -->
+<section>
+  <div class='ingredientes'>
+
+    <ul>
+
+      <h3>Ingredientes</h3>
+      {%for ingredient in receita.ingredients%}
+        <li>
+          <span>
+            {{ingredient}}</span></li>
+        {%endfor%}
+
+        <h3>Modo de Preparo</h3>
+        <span>
+          {{receita.preparation}}</span>
+
+        <h3>Informações Adicionais</h3>
+        <span>{{receita.information}}
+        </span>
+
+      </ul>
+    </div>
+  </section>
+  <!--FIM RECEITA-->
+</main>
+
 {% endblock main %}
