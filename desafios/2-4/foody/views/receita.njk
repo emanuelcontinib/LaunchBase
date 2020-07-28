@@ -14,7 +14,7 @@
       <div class="receita-titulo">{{receita.title}}</div>
     </div>
 
-    <div class="receita-autor">{{receita.author}}</div>
+    <div class="receita-autor">por {{receita.author}}</div>
   </div>
 </section>
 
@@ -28,11 +28,12 @@
       {%for ingredient in receita.ingredients%}
         <li>
           <span>
-            {{ingredient}}</span></li>
+            {{ingredient}};</span></li>
         {%endfor%}
 
-        <h3>Modo de Preparo</h3>
-        <span>
+        <h3 >Modo de Preparo</h3>
+        <button type="button" class="button">Esconder</button>
+        <span id="modo-de-preparo">
           {{receita.preparation}}</span>
 
         <h3>Informações Adicionais</h3>
@@ -43,6 +44,7 @@
     </div>
   </section>
   <!--FIM RECEITA-->
+    <script src="./scripts.js"></script>
 </main>
 
 {% endblock main %}

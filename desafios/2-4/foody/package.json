@@ -2,19 +2,16 @@
   "name": "foody",
   "version": "1.0.0",
   "description": "",
-  "main": "script.js",
+  "main": "data.js",
+  "dependencies": {},
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  },
   "scripts": {
-    "start": "nodemon server.js"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "express": "^4.17.1",
-    "nunjucks": "^3.2.1"
-  },
-  "devDependencies": {
-    "browser-sync": "^2.26.7",
-    "nodemon": "^2.0.4"
-  }
+  "license": "ISC"
 }

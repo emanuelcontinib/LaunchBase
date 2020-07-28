@@ -2,18 +2,12 @@
   font-family: "Roboto";
   letter-spacing: 1px;
 }
-.row-header {
-  display: grid;
-  grid-template-columns: 1fr 1fr 3fr;
-  margin-left: 7.5%;
+main{
+  display: flex;
+  flex-direction: column;
+  max-width: 85%;
+  margin: 0% 7%;
 }
-
-.img-header {
-  max-width: 100%;
-  height: auto;
-  margin: 35px 0px;
-}
-
 header .logo {
   width: 94px;
 }
@@ -35,39 +29,62 @@ header .menu a {
 header .menu a:hover {
   color: #c79188;
 }
-
-.img-fluid-cheff img{
-  position: relative;
+.row-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr 3fr;
+  margin-left: 7.5%;
+}
+.img-header {
+  max-width: 100%;
+  height: auto;
+  margin: 35px 0px;
 }
 
-
-.image-fluid {
-  width: 85%; 
-  height: 320px;
-  background: #fbdfdb;
-  border-radius: 30px;
+.receita {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  margin: auto;
-}
-
-.melhores-receitas .melhores-receitas__texto {
-  flex-direction: column-reverse;
-  width: 32%;
-  display: flex;
+  /* flex-direction: row; */
   justify-content: center;
 }
-
-melhores-receitas .melhores-receitas__texto h2 {
-  font-weight: bold;
-  font-size: 32px;
-  color: #111111;
-  margin-bottom: 10px;
-  letter-spacing: 1.5px;
+.img-fluid {
+  width: -webkit-fill-available;
+  height: auto;
+  margin: 0px 0px 35px 0px;
+  border-radius: 12px;
 }
 
-.melhores-receitas .melhores-receitas__texto p {
-  line-height: 28px;
-  color: rgb(17, 17, 17, 0.7);
+.receita-titulo {
+  font-size: xxx-large;
+  text-align: center;
+  font-weight: lighter;
+  margin-top  : 20px;
+  color: rgb(58, 58, 58);
+}
+.receita-autor{
+  font-size: 14px;
+  color: #777;
+  margin: 15px 0px 25px 0px;
+  text-align: center;
+}
+.ingredientes h3{
+  font-weight: lighter;
+  font-size: 22px;
+}
+ul{
+  font-weight: lighter;
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
+  padding: 0px;
+  list-style-type: none;
+  line-height: 1.6;
+}
+footer {
+  justify-content: center;
+  background: rgb(253, 253, 253);
+  text-align: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-size: 12px;
+  color: #616161;
+  bottom: 0px;
 }
