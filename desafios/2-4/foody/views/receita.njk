@@ -22,14 +22,20 @@
 <section>
   <div class='ingredientes'>
 
+    <h3>Ingredientes</h3>
+    
     <ul>
 
-      <h3>Ingredientes</h3>
       {%for ingredient in receita.ingredients%}
         <li>
           <span>
-            {{ingredient}};</span></li>
-        {%endfor%}
+            {{ingredient}};
+          </span>
+        </li>
+          
+      {%endfor%}
+        
+    </ul>
 
         <h3 >Modo de Preparo</h3>
         <button type="button" class="button">Esconder</button>
@@ -40,11 +46,10 @@
         <span>{{receita.information}}
         </span>
 
-      </ul>
     </div>
   </section>
   <!--FIM RECEITA-->
-    <script src="./scripts.js"></script>
+    <script src="/script.js"></script>
 </main>
 
 {% endblock main %}

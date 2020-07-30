@@ -15,17 +15,18 @@
         })
     }
 
-    Document
+    document
     .querySelector('.button')
-    .addEventListener('click', function(){
-        if(button.innerHTML == 'Esconder'){
-            button.innerHTML = 'Mostrar'
+    .addEventListener('click', function(e){
+        console.log(e.target);
+        if(e.target.innerHTML == 'Esconder'){
+            e.target.innerHTML = 'Mostrar'
         }else{
-            button.innerHTML = 'Esconder'
+            e.target.innerHTML = 'Esconder'
         }
     })
  
-    Document
+    document
     .querySelector('.button')
     .addEventListener('click', function(){
         if(button.innerHTML == 'Mostrar'){
@@ -35,6 +36,6 @@
         }
     })
 
-    Document.querySelector('.button').addEventListener('click', function(){
+    document.querySelector('.button').addEventListener('click', function(){
         console.log('botão clicado');
     })

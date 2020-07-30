@@ -51,3 +51,12 @@ header{
     width: 100%;
     transition: width 400ms ease-in-out;
 }
+.card{
+    background-color: var(--color-white);
+    width: 800px;
+    height: 400px;
+    margin: 45px auto;
+}
+.avatar style{
+    size: initial;
+}
