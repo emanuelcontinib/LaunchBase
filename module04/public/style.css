@@ -17,15 +17,15 @@ body{
 header{
     background-color: var(--color-white) ;
     width:100%;
-    padding: 32px;
+    padding: 3.2rem;
     text-align: center;
     box-sizing: border-box;/*expande o elementro até o final do padding*/
 }
 .links{
-    font-size: 22px;
+    font-size: 2.2rem;
 }
 .links a + a{  /*elemento + elemento pega o segundo, soma-os*/
-    margin-left: 32px;
+    margin-left: 3.2rem;
 }
 .links a{
     text-decoration: none;
@@ -42,7 +42,7 @@ header{
     content: "";
     background-color: var(--color-dark);
     width: 0px;
-    height: 2px;
+    height: 0.2rem;
     position: absolute;
     left: 0px;
     bottom: -4px;
@@ -53,9 +53,9 @@ header{
 }
 .card{
     background-color: var(--color-white);
-    width: 800px;
-    height: 400px;
-    margin: 45px auto;
+    width: 50rem;
+    height: 40rem;
+    margin: 4.5rem auto;
 }
 .avatar style{
     size: initial;
