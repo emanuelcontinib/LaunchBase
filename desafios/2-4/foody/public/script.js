@@ -15,27 +15,24 @@
         })
     }
 
-    document
-    .querySelector('.button')
-    .addEventListener('click', function(e){
-        console.log(e.target);
-        if(e.target.innerHTML == 'Esconder'){
-            e.target.innerHTML = 'Mostrar'
-        }else{
-            e.target.innerHTML = 'Esconder'
-        }
-    })
- 
-    document
-    .querySelector('.button')
-    .addEventListener('click', function(){
-        if(button.innerHTML == 'Mostrar'){
-            button.innerHTML = 'Esconder'
-        }else{
-            button.innerHTML = 'Mostrar'
-        }
-    })
+    var buttons = Array.from(document.querySelectorAll('.button'))
+    buttons.map(btn => {
+        btn.addEventListener('click', function (e) {
+            if (e.target.innerHTML == 'Esconder') {
+                e.target.innerHTML = 'Mostrar'
+            } else {
+                e.target.innerHTML = 'Esconder'
+                
+            }
+        });
+    });
 
-    document.querySelector('.button').addEventListener('click', function(){
-        console.log('botão clicado');
-    })
+    // var buttons = Array.from(document.querySelectorAll('.button'))
+    // buttons.map(btn => {
+    //     btn.addEventListener('click', function (e) {
+    //         if (e.target.innerHTML == 'Esconder') {
+    //             e.target.innerHTML = 'Mostrar'
+    //         } else {
+    //             e.target.innerHTML = 'Esconder'
+    //     });
+    // });

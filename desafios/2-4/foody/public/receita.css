@@ -68,6 +68,8 @@ header .menu a:hover {
 .ingredientes h3{
   font-weight: lighter;
   font-size: 22px;
+  position:relative;
+  display: inline-block;
 }
 ul{
   font-weight: lighter;
@@ -78,9 +80,26 @@ ul{
   list-style-type: none;
   line-height: 1.6;
 }
-span{
+p{
   display: block;
   text-align: justify;
+  font-weight: lighter;
+}
+.button{
+  font-weight: lighter;
+  letter-spacing: normal;
+  background-color:whitesmoke;
+  position: absolute;
+  margin-top: 12px;
+  border-radius: 7px;
+  border: none;
+  text-decoration:none;
+  outline-style: none;
+}
+.button:hover {background-color: #dddddd}
+.button:active {
+  background-color: #d3d3d3;
+
 }
 
 footer {
@@ -90,6 +109,6 @@ footer {
   padding-top: 1rem;
   padding-bottom: 1rem;
   font-size: 12px;
-  color: #616161;
+  color: #616161; 
   bottom: 0px;
 }
