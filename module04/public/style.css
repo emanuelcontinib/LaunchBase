@@ -3,11 +3,12 @@
     margin: 0;
     padding: 0;
     border: none;
+    letter-spacing: 0.7px;
 }
 :root{
     --color-white:rgb(226, 226, 226);
     --color-orange:rgb(252, 165, 4);
-    --color-dark:#060018;
+    --color-dark:#0d114b;
 }
 
 body{
@@ -51,12 +52,77 @@ header{
     width: 100%;
     transition: width 400ms ease-in-out;
 }
+
 .card{
     background-color: var(--color-white);
     width: 50rem;
-    height: 40rem;
+    height: 30rem;
     margin: 4.5rem auto;
+    min-height: 29rem;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    box-shadow:  2rem 2rem 0.5rem 0.5rem rgb(2, 3, 61);
+
+    animation: up 200ms;
+    animation-duration: 200ms ease-out;
 }
-.avatar style{
-    size: initial;
+
+@keyframes up {
+    from{
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+/*Detalher card instructors*/
+
+.details{
+    padding: 3rem;
+    min-height: max-content;
+}
+
+.details .item{
+    border-bottom: 1px solid rgb(167, 167, 167);
+    padding: 1.7rem 0;
+}
+
+.details .item:last-child{
+    border: none;
+}
+
+.details .item div:nth-last-child(1){/* seleciona a primeira div apenas */
+    color: rgba(0, 0, 0, 0.959);
+    font-weight: bold;
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+.details h3,
+.details .item div:nth-last-child(2){/* seleciona a primeira div apenas */
+    color: rgba(87, 87, 87, 0.959);
+    font-weight: bold;
+    font-size: 0.8rem;
+    font-weight: light;
+}
+.details h3{
+    text-transform: uppercase;
+    font-weight: bold;
+    color: var(--color-dark);
+}
+
+.details .item span{
+    padding: 0.8rem 2rem;
+    background-color: var(--color-orange);
+    border-radius: 16px;
+    margin-right: 0.2rem;
+    margin-top: 0.8rem;
+    display: inline-block;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 12px;
 }
