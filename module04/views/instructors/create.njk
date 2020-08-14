@@ -1,20 +1,25 @@
-
 {%extends "layout.njk"%}
-
-
 
 {% block content %}
 
   <form class="card" method="POST" action="/intructors">
-    <section class="avatar" 
-            style="background: url('https://source.unsplash.com/collection/4782235/900x900') no-repeat center / cover"></section>
+    <section class="avatar" style="background: url('https://source.unsplash.com/collection/4782235/900x900') no-repeat center / cover"></section>
     <section class="details">
 
-      <h3>Detalhes</h3>
+      <h3>Novo Instrutor</h3>
 
       <div class="item">
-        <div class="instructor">Instrutor</div>
-        <div class="instructor-name">Guilherme Saraiva</div>
+        <div class="instructor">Avatar URL</div>
+        <div class="instructor-name">
+          <input type="url" name="avatar_url" >
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="instructor">Idade</div>
+        <div class="instructor-name">
+        <input type="number" name="" id="">
+        </div>
       </div>
 
       <div class="item">
@@ -35,10 +40,7 @@
         <div class="instructor-date">01/01/19</div>
       </div>
 
-        
-
     </section>
-  </form> 
-
+  </form>
 
 {% endblock content %}
