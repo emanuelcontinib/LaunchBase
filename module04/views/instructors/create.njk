@@ -11,34 +11,51 @@
       <div class="item">
         <div class="instructor">Avatar URL</div>
         <div class="instructor-name">
-          <input type="url" name="avatar_url" >
+          <input 
+            type="url"
+            name="avatar_url"
+            placeholder="http://">
         </div>
       </div>
 
       <div class="item">
-        <div class="instructor">Idade</div>
+        <div class="instructor">Instrutor (a)</div>
         <div class="instructor-name">
-        <input type="number" name="" id="">
+          <input 
+            type="url"
+            name="avatar_url"
+            placeholder="Nome do Instrutor(a)">
         </div>
       </div>
 
       <div class="item">
-        <div class="instructor-genre">Sexo</div>
-        <div class="instructor-sex">Masculino</div>
+        <div >Data de Nascimento</div>
+        <div >
+          <input 
+          type="date" 
+          name="birth">
+        </div>
       </div>
 
       <div class="item">
-        <div>Acompanhamento</div>
+        <div>Sexo</div>
+        <div class="gender">
+          <span><input type="radio" name="gender" value="M">Masculino</span>
+          <span><input type="radio" name="gender" value="F">Feminino</span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div>Área de Atuação</div>
         <div>
-          <span>Crossfit</span>
-          <span>Musculação</span>
+          <input 
+            type="text" 
+            name="services"
+            placeholder="Separe as especialidades por vírgula">
         </div>
       </div>
 
-      <div class="item">
-        <div class="instructor-since">Desde</div>
-        <div class="instructor-date">01/01/19</div>
-      </div>
+      <button type="submit" >Salvar</button>
 
     </section>
   </form>

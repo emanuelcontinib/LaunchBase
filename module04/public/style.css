@@ -18,7 +18,7 @@ body{
 header{
     background-color: var(--color-white) ;
     width:100%;
-    padding: 3.2rem;
+    padding: 1rem;
     text-align: center;
     box-sizing: border-box;/*expande o elementro até o final do padding*/
 }
@@ -55,7 +55,7 @@ header{
 
 .card{
     background-color: var(--color-white);
-    width: 50rem;
+    width: 52rem;
     height: 30rem;
     margin: 4.5rem auto;
     min-height: 29rem;
@@ -83,13 +83,13 @@ header{
 /*Detalher card instructors*/
 
 .details{
-    padding: 3rem;
+    padding: 3.2rem;
     min-height: max-content;
 }
 
 .details .item{
     border-bottom: 1px solid rgb(167, 167, 167);
-    padding: 1.7rem 0;
+    padding: 0.7rem 0;
 }
 
 .details .item:last-child{
