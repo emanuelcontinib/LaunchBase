@@ -18,3 +18,4 @@ nunjucks.configure("views",{ //configurando o nujucks
 server.listen(5000, function () { //porta e depois a função//
     console.log("server ok")
 })  
+
