@@ -1,0 +1,25 @@
+{%extends "layout.njk"%}
+
+{% block head %}
+    <title>About</title>
+{% endblock head %}
+
+{%block content%}
+
+    <div id="wrapper">
+        <img src={{about.avatar_url}}>
+        <h1>{{about.name}}</h1>
+        <h2>{{about.learn}}
+        </h2>
+        <p>{{about.role}}</a>
+        </p>
+    </div>
+
+    {% for link in about.links %}
+        <div id="links-footer" class='links'>
+            <a href="{{link.url}}" target = "blank"> {{link.name}} </a>
+    {% endfor %}
+ 
+    </div>
+
+{% endblock content%} 

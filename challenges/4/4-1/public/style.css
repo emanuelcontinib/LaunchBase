@@ -28,12 +28,29 @@ header {
     line-height: 28px;
     margin: 0 16px;
     text-decoration: none;
+    position: relative;
 }
 
 .links a:hover {
     color:var(--color-orange);
     transition: 500ms;
+
 }
+.links a::after {
+    content: "";
+    background-color: var(--color-orange);
+    width: 0px;
+    height: 0.2rem;
+    position: absolute;
+    left: 0px;
+    bottom: -4px;
+}
+
+.links a:hover::after {
+    width: 100%;
+    transition: width 400ms ease-in-out;
+}
+
 
 #wrapper{
     text-align: center;

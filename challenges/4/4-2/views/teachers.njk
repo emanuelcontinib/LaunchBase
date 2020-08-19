@@ -1,0 +1,55 @@
+{%extends "layout.njk"%}
+
+{% block head %}
+    <title>Portfolio Emanuel</title>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+{% endblock head %}
+
+{%block content %}
+
+    <form action="/views/about.njk" method="post">
+        <h1>Insira os dados abaixo</h1>
+        <div class="item">
+            <div class="name">
+                <input type="text" name="name" placeholder="Insira seu nome completo">
+            </div>
+            <div class="date">
+                <label for="date">Data de Nascimento</label>
+                <input type="date" name="date" id="">
+            </div>
+            <div class="select">
+
+                <label for="formation">Selecione a formação</label>
+                <select name="formation">
+                    <option value="medioIncompleto">Ensino Médio Incompleto</option>
+                    <option value="medioCompleto">Ensino Médio Completo</option>
+                    <option value="superiorInconpleto">Superior Incompleto</option>
+                    <option value="superiorCompleto">Superior Completo</option>
+                    <option value="mestrado">Mestrado</option>
+                    <option value="doutorando">Doutorando</option>
+                    <option value="doutorado">Doutorado</option>
+                </select>
+
+                <div class="inputRadio">
+                    <div>Modalidade:</div>
+                    <input type="radio" id="presencial" name="model" value="presencial">
+                    <label for="presencial">Presencial</label>
+                    <input type="radio" id="distance" name="model" value="distance">
+                    <label for="presencial">A Distância</label>
+                </div>
+
+                <div class="subjects">
+                    <div>Habilitado(a) em:</div>
+                    <input type="text" name="subjects" placeholder="Insira as matérias, separadas por vírgula">
+                </div>
+
+            </div>
+        </div>
+
+    </form>
+
+    <script src="/scripts.js"></script>
+
+{% endblock content %}
