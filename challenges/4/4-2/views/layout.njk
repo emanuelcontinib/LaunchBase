@@ -1,32 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-            {% block head %}
-                <title>module 02</title>
-            {% endblock head %}
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
-        <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="/style.css">
-    </head>
+        <title>Primeiro Servidor</title>
 
-    <body>
+        <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+        {% block head %}
+        {% endblock head %}
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    </head>
+    
+
         <header>
-            <div class='links'>
-                <a href="/about">
-                    Sobre
-                </a>
-                <a href="/portfolio">
-                    Aulas
-                </a>
-                <a href="/teachers">
-                    Professores
-                </a>
+            <div>
+
+                <p>
+            <a href='/'>Home</a>
+            <a href='/about'>Sobre</a>
+            <a href="/courses">Cursos</a>
+            <a href="https://discordapp.com/invite/gCRAFhc">Comunidade</a>
+                <p>
+
+                {% block content %}
+                {% endblock content %}
+
+                <div id="links-footer" class='links'>
+                    <a href="https://www.instagram.com/rocketseat_oficial/?hl=en" target="_blank">
+                        Instagram
+                    </a>
+                    <a href="https://github.com/Rocketseat" target="_blank">
+                        Github
+                    </a>
+                    <a href="https://www.linkedin.com/school/rocketseat/?originalSubdomain=br" target="_blank">
+                        LinkedIn
+                    </a>
+                </div>
+
             </div>
         </header>
 
-        {% block content %}{% endblock content %}
-
-    </body>
 
 
+        <script src="/script.js"></script>
+
+    
 </html>

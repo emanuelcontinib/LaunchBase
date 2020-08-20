@@ -1,54 +1,58 @@
-const express = require('express')
-const nunjucks = require ("nunjucks")
+const express = require("express")
+const nunjucks = require("nunjucks")
 
 const server = express()
-const videos = require("./data")
+const cards = require('./data')
+
 server.use(express.static('public'))
 
-server.set("view engine", "njk")//setando o engine usando html
+server.set("view engine", "njk") //setando o motor engine usando html
 
-nunjucks.configure("views",{ //configurando o nujucks
+nunjucks.configure("views", { //configurando o nujucks
     express: server,
-    autoescape:false,
-    noCache:true    
+    autoescape: false
 })
+
+server.get("/", function (req, res) {
+    return res.render("home")
+}) //renderizar a página home
+
 
 server.get("/about", function (req, res) {
     const about = {
-        avatar_url:"https://scontent.fpoa1-1.fna.fbcdn.net/v/t1.0-9/79972495_2706082946122454_4086648329738387456_o.jpg?_nc_cat=109&_nc_sid=09cbfe&_nc_eui2=AeE8ELOSFi7_jmEi5GxLMxbgRP0214E_aR1E_TbXgT9pHQ9Ojkrp3g1mohHVjgTC59ditd4ewq85JcBkE1_DIyNi&_nc_ohc=kJOnc11tmMwAX_rqttC&_nc_ht=scontent.fpoa1-1.fna&oh=6731858e40031f60352ff423b6c51c21&oe=5F246F3B",
-        name:"Emanuel Contini Bertol",
-        learn:"Aluno Rocketseat Launchbase Bootcamp",
-        role:'Desenvolvedor Fullstack Júnior/ Analista de Suporte na <a href="https://weecode.com.br" target="_blank">Weecode',
-        link: [
-            {name:"Github", url: "https://github.com/emanuelcontinib/"},
-            {name:"Linkedin", url: "https://www.linkedin.com/in/emanuel-contini-bertol-12bbb4164/"},
-            {name:"Spotify", url: "https://open.spotify.com/user/12149389009"},
-        ]
+        src: `https://www.reshape.com.br/assets/uploads/rocketseat.png`,
+        h3: "Treinamento imersivo nas tecnologias mais modernas de desenvolvimento",
+        modules: "13 módulos",
+        coast: 'R$ Pago'
     }
-
-    return res.render("about", {about})  //renderizar a página index
+    return res.render("about", {
+        about
+    }) //renderizar a página classes
 })
 
-server.get("/portfolio", function (req, res) {
-    return res.render("portfolio" , {items: videos})  //renderizar a página classes
+server.get("/courses", function (req, res) {
+    return res.render("courses", {
+        items: cards
+    }) //renderizar a página classes
 })
 
-server.get("/teachers", function (req, res) {
-    return res.render("teachers")  //renderizar a página classes
+server.get('/courses/:id', (req, res) => {
+	const { id } = req.params
+
+	const course = cards.find(course => course.id == id)
+
+	if (!course) {
+		return res.send('Course not found')
+	}
+
+	return res.render('course', { course })
 })
 
-server.get('/video', function(req,res){
-    const id = req.query.id
 
-    const video = videos.find(function(video){
-        return video.id == id
-    }) 
-    if(!video){
-        return res.send ("Video not found")
-    }
-    return res.render('video', {item: video})
-})
+server.use(function (req, res) {
+    res.status(404).render("not-found");
+});
 
 server.listen(5000, function () { //porta e depois a função//
     console.log("server ok")
-})  
+})
