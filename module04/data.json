@@ -1,5 +1,13 @@
 {
   "instructors": [
-
+    {
+      "avatar_url": "https://guizao.com",
+      "birth": 728524800000,
+      "created_at": 1598894809279,
+      "gender": "M",
+      "services": "crossfit, stronglift",
+      "name": "carlos braga",
+      "id": 1
+    }
   ]
 }
