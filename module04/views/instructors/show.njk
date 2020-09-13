@@ -26,7 +26,7 @@
         <div>
           {%for service in instructor.services%}
 
-          <span>{{ service }}</span>
+          <span>{{ service.split(',') }}</span>
           {%endfor%}
           
         </div>
