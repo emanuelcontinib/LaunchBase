@@ -114,7 +114,7 @@ header {
 
 .details {
     padding: 32px;
-    height: inherit;
+    height: max-content;
 }
 
 .details .item {
