@@ -193,12 +193,9 @@ a.button {
     margin-top: 32px;
     width: 100%;
     font-size: 16px;
-
-}
-
-a.button {
     display: block;
     box-sizing: border-box;
     text-align: center;
     text-decoration: none;
 }
+
