@@ -1,6 +1,7 @@
 const fs = require('fs')
 const data = require('./data.json')
-const { age } = require('../utils')
+const { age, date } = require('./utils')
+
 
 exports.show = function (req, res) {
   const {
@@ -66,6 +67,28 @@ exports.post = function (req, res) {
   })
 }
 
-//UPDATE
+// UPDATE
+
+ exports.edit = function (req, res) {
+    const {
+      id
+    } = req.params
+  
+    const foundInstructor = data.instructors.find(function (instructor) {
+  
+      return instructor.id == id
+    })
+    if (!foundInstructor) return res.send("Instructor not found")
+
+
+    const instructor = {
+      ...foundInstructor,
+      birth: date(foundInstructor.birth)
+    }
+    
+
+    return res.render ('instructors/edit', {instructor} )
+  }
+
 
 //DELETE
